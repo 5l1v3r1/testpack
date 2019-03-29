@@ -1,5 +1,5 @@
-import os
+from pkg_resources import resource_string
 
 def test():
-    with open(os.path.join(os.path.dirname(__file__), 'info.txt')) as f:
+    with open(resource_string(__name__, 'info.txt')) as f:
         print(f.read())
