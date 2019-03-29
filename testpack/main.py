@@ -1,5 +1,5 @@
-from pkg_resources import resource_string
+from pkg_resources import resource_filename
 
 def test():
-    with open(resource_string(__name__, 'info.txt')) as f:
+    with open(resource_filename(__name__, 'data/info.txt')) as f:
         print(f.read())
